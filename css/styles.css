@@ -1,9 +1,26 @@
+:root {
+    --primary-brand: #4D5AE5;
+    --pressed-state: #404BBF;
+    --dark: #2E2F42;
+    --success: #31D0AA;
+    --text: #434455;
+    --subtle-text: #8E8F99;
+    --accent: #E7E9FC;
+    --light: #F4F4FD;
+    --modal-overlay: rgba(46 47 66 0.4);
+    --hero-background: rgba(46 47 66 70%);
+    --white-background: #ffffff;
+    --modal-background: #FCFCFC;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    color: #434455;
-    background-color: #ffffff;
+    color: var(--text);
+    background-color: var(--white-background);
 
 }
+
+
 
 .page {
     min-height: 100vh;
@@ -54,11 +71,11 @@ li{
     padding-top: 25.5px;
     padding-bottom: 25.5px;
     align-items: center;
-    gap: 76px;
+    justify-content: space-between;
 }
 
 .header-logo {
-    color: #2E2F42;
+    color: var(--dark);
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -68,7 +85,7 @@ li{
 }
 
 span {
-    color: #4D5AE5;
+    color: var(--primary-brand);
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -84,13 +101,18 @@ span {
     margin: 0 auto;
 }
 
+.navigation {
+    display: flex;
+    gap: 76px;
+}
+
 .header-list{
     display: flex;
     gap: 40px;
 }
 
 .header-navigation {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -99,19 +121,15 @@ span {
 
 .header-contact-list {
     display: flex;
-    margin-left: auto;  /*!!!---ЧОМУ НЕ ПРАЦЮЄ????----*/
     gap: 40px;
 }
 
-
-
-
 .header-navigation:hover {
-    color: #404BBF;
+    color: var(--pressed-state);
 }
 
 .header-contact{
-    color: #434455;
+    color: var(--text);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -120,7 +138,7 @@ span {
 }
 
 .header-contact:hover {
-    color: #404BBF;
+    color: var(--pressed-state);
 }
 
 
@@ -128,7 +146,7 @@ span {
 
 
 .title {
-    background-color: #2E2F42;
+    background-color: var(--dark);
 }
 
 .title-wrap {
@@ -136,7 +154,7 @@ span {
 }
 
 .title-name {
-    color: #ffffff;
+    color: var(--white-background);
     font-size: 56px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -148,21 +166,21 @@ span {
 
 .title-btn {
     display: block;
-    color: #ffffff;
+    color: var(--white-background);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     padding: 16px 32px;
     border-radius: 4px;
-    background-color: #4D5AE5;
+    background-color: var(--primary-brand);
     margin: 0 auto;
     margin-top: 48px;
     border: none;
 }
 
 .title-btn:hover {
-    background-color: #404BBF;
+    background-color: var(--pressed-state);
 }
 
 
@@ -177,7 +195,7 @@ span {
 }
 
 .advantages-item {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -202,7 +220,7 @@ span {
 }
 
 .product-title {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -215,7 +233,7 @@ span {
 
 
 .team {
-    background-color: #F4F4FD;
+    background-color: var(--light);
 }
 
 .team-wrap {
@@ -224,7 +242,7 @@ span {
 }
 
 .team-title {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -239,7 +257,7 @@ span {
 
 
 .team-name {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -264,11 +282,11 @@ span {
 
 
 .footer{
-    background-color: #2E2F42;
+    background-color: var(--dark);
 }
 
 .footer-logo{
-    color: #F4F4FD;
+    color: var(--light);
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -280,7 +298,7 @@ span {
 }
 
 .footer-text {
-    color: #F4F4FD;
+    color: var(--light);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -299,21 +317,21 @@ span {
 }
 
 .button-item {
-    color: #4D5AE5;
+    color: var(--primary-brand);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     padding: 12px 24px;
     border-radius: 4px;
-    background-color: #F4F4FD;
-    border: 1px solid #E7E9FC;
+    background-color: var(--light);
+    border: 1px solid var(--accent);
     
 }
 
 .button-item:hover{
-    color: #ffffff;
-    background-color: #404BBF;
+    color: var(--white-background);
+    background-color: var(--pressed-state);
 }
 
 
@@ -323,7 +341,7 @@ span {
 .items {}
 
 .items-title {
-    color: #2E2F42;
+    color: var(--dark);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
